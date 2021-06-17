@@ -15,19 +15,19 @@ class VideoSeeder extends Seeder
     public function run()
     {
         Video::create([
-            'URL' => 'https://www.youtube.com/embed/5dsGWM5XGdg'
+            'URL' => 'https://www.youtube.com/watch?v=VB4CCHHYOqY'
         ]);
 
         Video::create([
-            'URL' => 'https://www.youtube.com/embed/VB4CCHHYOqY'
+            'URL' => 'https://www.youtube.com/watch?v=5dsGWM5XGdg'
         ]);
 
         Video::create([
-            'URL' => 'https://www.youtube.com/embed/d8DgndRyHWM'
+            'URL' => 'https://www.youtube.com/watch?v=d8DgndRyHWM'
         ]);
 
         Video::create([
-            'URL' => 'https://www.youtube.com/embed/a3o9a6pBKz8'
+            'URL' => 'https://www.youtube.com/watch?v=a3o9a6pBKz8'
         ]);
     }
 }

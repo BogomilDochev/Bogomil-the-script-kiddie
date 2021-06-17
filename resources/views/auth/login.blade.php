@@ -30,6 +30,7 @@
                                 type="password"
                                 name="password"
                                 required autocomplete="current-password" />
+                <p style="font-size: 12px">We encourage the use of password manager for better protection.</p>
             </div>
 
             <!-- Remember Me -->

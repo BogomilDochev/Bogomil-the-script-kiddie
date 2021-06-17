@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\User;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
@@ -25,6 +26,22 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Gate::define('upload-video', function (User $user){
+            if($user->email == 'example@example.com'){
+                return true;
+            }
+            else{
+                return false;
+            }
+        });
+
+        Gate::define('delete-videos', function (User $user){
+            if($user->email == 'example@example.com'){
+                return true;
+            }
+            else{
+                return false;
+            }
+        });
     }
 }

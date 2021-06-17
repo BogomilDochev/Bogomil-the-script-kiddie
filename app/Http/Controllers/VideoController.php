@@ -25,7 +25,7 @@ class VideoController extends Controller
      */
     public function create()
     {
-        //
+        return view('createVideo');
     }
 
     /**
@@ -36,7 +36,9 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Video::create($this->validateVideo($request));
+
+        return redirect(route('videos.index'));
     }
 
     /**
@@ -81,6 +83,18 @@ class VideoController extends Controller
      */
     public function destroy(Video $video)
     {
-        //
+        $video->delete();
+
+        return redirect(route('videos.index'));
+    }
+
+    /**
+     * @return array
+     */
+    protected function validateVideo(Request $request): array
+    {
+        return $request->validate([
+            'URL' => 'required'
+        ]);
     }
 }

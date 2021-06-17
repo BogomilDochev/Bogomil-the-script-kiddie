@@ -34,7 +34,6 @@
                                 type="password"
                                 name="password"
                                 required autocomplete="new-password" />
-                <p style="font-size: 12px">We encourage you to use password manager for safer password</p>
             </div>
 
             <!-- Confirm Password -->
