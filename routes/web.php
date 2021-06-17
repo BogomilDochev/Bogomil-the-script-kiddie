@@ -4,6 +4,10 @@ use App\Http\Controllers\PictureController;
 use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
+if (App::environment('production')) {
+    URL::forceScheme('https');
+}
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
