@@ -15,7 +15,7 @@
         <div class="navbar-start">
             <a  href="/"
                 class="navbar-item {{ Request::path() === '/' ? "is-active" : "" }}">
-                Welcome
+                Home
             </a>
 
             <a href="/videos"
